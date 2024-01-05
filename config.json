@@ -1,0 +1,44 @@
+{
+    "roles": [
+        {
+            "name": "Novice",
+            "color": "Light Grey"
+        },
+        {
+            "name": "Apprentice",
+            "color": "Dark Grey"
+        },
+        {
+            "name": "Journeyman",
+            "color": "Teal"
+        },
+        {
+            "name": "Skilled",
+            "color": "Dark Teal"
+        },
+        {
+            "name": "Expert",
+            "color": "Green"
+        },
+        {
+            "name": "Master",
+            "color": "Dark Green"
+        },
+        {
+            "name": "Lord",
+            "color": "Blue"
+        },
+        {
+            "name": "Legend",
+            "color": "Dark Blue"
+        },
+        {
+            "name": "Celestial",
+            "color": "Purple"
+        },
+        {
+            "name": "Ascended",
+            "color": "Gold"
+        }
+    ]
+}
