@@ -1,20 +1,20 @@
-# This example requires the 'message_content' intent.
-
 import discord
 import os
-import src
+from discord import app_commands
+from discord.ext import commands
 from dotenv import load_dotenv
 
 load_dotenv()
 
 TOKEN = os.getenv("TOKEN")
-intents = discord.Intents.default()
-intents.message_content = True
 
-client = discord.Client(intents=intents)
+bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 
-@client.event
+@bot.event
 async def on_ready():
-    print(f'We have logged in as {client.user}')
+    await bot.load_extension(f"src.admin")
+    synced = await bot.tree.sync()
+    print(f'We have logged in as {bot.user}')
+    print(f'{len(synced)} commands were synced')
 
-client.run(TOKEN)
+bot.run(TOKEN)
