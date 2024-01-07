@@ -1,13 +1,17 @@
-import sqlite3
+import aiosqlite 
 
 class Database:
     def __init__(self):
         self.connection = None
 
 
-    def get_connection(self):
+    async def get_connection(self):
+        """
+        Returns:
+            Database connection
+        """
         if self.connection is None:
-            self.connection = sqlite3.connect("../databases/users.db")
+            self.connection = await aiosqlite.connect("../databases/exp.db")
             return self.connection
 
 
